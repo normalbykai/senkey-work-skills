@@ -1,0 +1,4 @@
+interface:
+  display_name: "Solution Fit Review"
+  short_description: "Assess solution fit before producing the final approach"
+  default_prompt: "Use $solution-fit-review to assess whether this approach fits the current context and present only the adopted solution."

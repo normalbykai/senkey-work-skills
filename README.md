@@ -6,6 +6,8 @@
 
 - `local-git-commit`：用于检查当前仓库的未提交改动，并生成符合中文规范的提交主题和变更概述。只有在用户明确要求时才会创建本地提交；默认不会推送到远端，避免未经确认地改变 Git 历史或发布代码。
 - `plan-before-implementation`：用于需要先评审方案的任务。必须由用户显式调用，启用后 Agent 只会调研并交付方案文档；必须等用户确认方案后，才会进入代码修改、提交、部署等实施环节。
+- `solution-fit-review`：用于在实施前独立评估用户提出的技术或产品方案是否符合实际目标、现有系统和成本约束；输出聚焦最终采纳的方案，避免将可行但不合适的实现直接落地。
+- `skill-doc-sync`：用于新增或实质调整项目 skill 时，同步更新外部 Markdown 技能清单，简要说明其用途、适用场景及必要的启用边界；默认更新本仓库的 `README.md`，也可遵从用户指定的文档。
 
 ```text
 项目根目录/
@@ -14,14 +16,24 @@
 │       ├── local-git-commit/
 │       │   ├── SKILL.md
 │       │   └── agents/openai.yaml
-│       └── plan-before-implementation/
+│       ├── plan-before-implementation/
+│       │   ├── SKILL.md
+│       │   └── agents/openai.yaml
+│       ├── solution-fit-review/
+│       │   ├── SKILL.md
+│       │   └── agents/openai.yaml
+│       └── skill-doc-sync/
 │           ├── SKILL.md
 │           └── agents/openai.yaml
 └── .claude/
     └── skills/
         ├── local-git-commit/
         │   └── SKILL.md
-        └── plan-before-implementation/
+        ├── plan-before-implementation/
+        │   └── SKILL.md
+        ├── solution-fit-review/
+        │   └── SKILL.md
+        └── skill-doc-sync/
             └── SKILL.md
 ```
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Skill Documentation Sync"
+  short_description: "Keep the external skill catalog in sync"
+  default_prompt: "Use $skill-doc-sync to update the external Markdown catalog for the skills changed in this task."
