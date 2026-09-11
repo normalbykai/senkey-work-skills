@@ -1,0 +1,6 @@
+interface:
+  display_name: "本地 Git 提交"
+  short_description: "分析本地改动并生成中文提交信息，仅在用户明确要求时创建本地提交"
+  default_prompt: "使用 $local-git-commit 分析当前仓库的改动，生成中文提交主题和变更概述；仅在我明确要求提交时创建本地提交。"
+policy:
+  allow_implicit_invocation: true

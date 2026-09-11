@@ -1,0 +1,6 @@
+interface:
+  display_name: "先出方案，确认后实施"
+  short_description: "仅用户显式调用时启用，只交付方案文档，明确确认后才开始实施"
+  default_prompt: "使用 $plan-before-implementation 为本次需求编写方案文档，本次只出方案，不落地实施；等我明确确认方案后再实施。"
+policy:
+  allow_implicit_invocation: false
